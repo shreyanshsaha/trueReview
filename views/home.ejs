@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>True Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/home.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <form action="" method="POST">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search" autocomplete="off">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button">Add icon Here</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <% if(movies.length>0){ %>
+    <div class="container">
+    <div class="card-columns mt-4">
+    <% movies.forEach(function(movie){ %>
+      <% if(movies.Type="movie" && movie.Poster!="N/A"){ %>
+        <div class="card bg-dark text-light text-center" onclick="window.location.assign('/<%=movie.imdbID%>/show');">
+          <img class="card-img" src="<%=movie.Poster%>" alt="Card image cap">
+          <div class="card-img-overlay">
+            <h3 class="card-title"><%=movie.Title%></h3>
+            <p class="card-text"><%= movie.Year%></p>
+          </div>
+        </div>
+      <% }}); %>
+  <% }else{ %>
+    <div class="container mt-4" id="welcomeText">
+      <h1 class="text-muted text-center"><i class="fas fa-search"></i> Search for a movie!</h1>
+    </div>
+  <% } %>
+
+</body>
+</html>

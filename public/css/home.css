@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900");
+#welcomeText {
+  padding-top: 10%;
+}
+
+.card .card-img {
+  -webkit-transition: 100ms;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .card-img {
+  -webkit-transition: 100ms;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.card .card-img-overlay {
+  padding-top: 50%;
+  font-size: 3rem;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5), 5px 10px 10px rgba(0, 0, 0, 0.2), 5px 10px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Lato";
+}
+
+.card .card-img-overlay h3 {
+  font-weight: 900;
+}
+
+.card .card-img-overlay p {
+  font-weight: 400;
+}
+/*# sourceMappingURL=home.css.map */
